@@ -1,0 +1,118 @@
+.catalog-pagination {
+  padding: 0 20px;
+  padding-bottom: 60px;
+
+  @media (min-width: $tablet) {
+    grid-column: 1/-1;
+    padding-bottom: 100px;
+  }
+
+  @media (min-width: $desktop) {
+    grid-column: 1/-1;
+    padding-bottom: 120px;
+  }
+}
+
+.catalog-pagination__list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end;
+
+  @media (min-width: $desktop) {
+    margin-right: 20px;
+  }
+}
+
+.catalog-pagination__item {
+  margin-left: 20px;
+  min-width: 40px;
+}
+
+.catalog-pagination__link {
+  display: block;
+  padding: 8px 10px;
+  background-color: $base-white;
+  color: $base-primary;
+
+  &:focus,
+  &:hover {
+    color: $base-white;
+    background-color: $primary-lighter;
+  }
+
+  &:active {
+    color: $base-white;
+    background-color: $primary-darker;
+  }
+
+  &:disabled {
+    color: $base-white;
+    background-color: $base-grey;
+  }
+
+  &--active {
+    font-weight: $font-semibold;
+    background-color: $lightest-grey;
+    color: $base-black;
+    cursor: auto;
+
+    &:hover,
+    &:active {
+      background-color: $lightest-grey;
+      color: $base-black;
+    }
+  }
+}
+
+.catalog-pagination__prev-text,
+.catalog-pagination__next-text {
+  padding-left: 4px;
+  padding-right: 4px;
+
+  @media (max-width: $mobile-only) {
+    display: none;
+  }
+
+  @media (min-width: $tablet) {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+.catalog-pagination__link-prev {
+  position: relative;
+
+  @media (max-width: $mobile-only) {
+    &::before {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      width: 40px;
+      height: 40px;
+      border-radius: 4px;
+      background: url("../img/arrow-pagination.svg") no-repeat 50% 50%;
+      background-color: $base-white;
+    }
+  }
+}
+
+.catalog-pagination__link-next {
+  position: relative;
+
+  @media (max-width: $mobile-only) {
+    &::before {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      width: 40px;
+      height: 40px;
+      border-radius: 4px;
+      background: url("../img/arrow-pagination.svg") no-repeat 50% 50%;
+      transform: rotate(180deg);
+      background-color: $base-white;
+    }
+  }
+}

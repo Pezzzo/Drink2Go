@@ -1,0 +1,38 @@
+.catalog {
+  background-color: $lightest-grey;
+  text-align: center;
+  padding-top: 50px;
+
+  @media (min-width: $tablet) {
+    padding-top: 80px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-top: 100px;
+  }
+}
+
+.catalog-wrapper {
+  @media (min-width: $tablet) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: $desktop) {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px 30px;
+  }
+}
+
+.catalog__title {
+  padding-top: 4px;
+  margin-bottom: 20px;
+
+  @media (min-width: $tablet) {
+    @include font-setting(42px, 64px,);
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 94px;
+  }
+}

@@ -1,0 +1,169 @@
+.features {
+  text-align: center;
+  padding: 50px 20px 20px 20px;
+
+  @media (min-width: $tablet) {
+    padding: 60px 30px 98px 30px;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 100px 40px 118px 40px;
+  }
+}
+
+.features__list {
+  margin: 0;
+  padding: 0;
+  padding-bottom: 2px;
+
+  @media (min-width: $tablet) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px 40px;
+    text-align: left;
+  }
+
+  @media (min-width: $desktop) {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    text-align: center;
+  }
+}
+
+.features__item {
+  position: relative;
+  padding-top: 50px;
+  padding-bottom: 38px;
+
+  @media (min-width: $tablet) {
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 72px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-left: 0;
+  }
+}
+
+.features__item:nth-child(1),
+.features__item:nth-child(2),
+.features__item:nth-child(3),
+.features__item:nth-child(4) {
+  &::after {
+    position: absolute;
+    content: "";
+    width: 52px;
+    height: 56px;
+    top: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @media (min-width: $tablet) {
+      top: 10px;
+      left: 20px;
+    }
+
+    @media (min-width: $desktop) {
+      top: -66px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}
+
+.features__item:nth-child(2n) {
+  @media (min-width: $tablet) {
+    padding-left: 66px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-left: 0;
+  }
+}
+
+.features__item:nth-child(1) {
+  &::after {
+    background: url("../img/icon-alarm.svg") 50% 50% no-repeat;
+
+    @media (min-width: $tablet) {
+      top: 14px;
+      left: 26px;
+    }
+
+    @media (min-width: $desktop) {
+      top: -66px;
+      left: 160px;
+    }
+  }
+}
+
+.features__item:nth-child(2) {
+  &::after {
+    background: url("../img/icon-shield.svg") 50% 50% no-repeat;
+  }
+}
+
+.features__item:nth-child(3) {
+  &::after {
+    background: url("../img/icon-lightning.svg") 50% 50% no-repeat;
+
+    @media (min-width: $tablet) {
+      left: 26px;
+    }
+
+    @media (min-width: $desktop) {
+      left: 160px;
+    }
+  }
+}
+
+.features__item:nth-child(4) {
+  &::after {
+    background: url("../img/icon-sheet.svg") 50% 50% no-repeat;
+
+    @media (min-width: $tablet) {
+      top: 14px;
+    }
+
+    @media (min-width: $desktop) {
+      top: -66px;
+    }
+  }
+}
+
+
+.features__title {
+  margin-bottom: 42px;
+  padding-top: 4px;
+
+  @media (min-width: $tablet) {
+    @include font-setting(42px, 64px,);
+    margin-bottom: 50px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 146px;
+  }
+}
+
+.features__subtitle {
+  margin: 10px 0 4px 0;
+  font-weight: $font-bold;
+
+  @include font-setting(18px, 32px,);
+
+  @media (min-width: $tablet) {
+    margin: 10px 0 10px 0;
+
+    @include font-setting(24px, 36px,);
+  }
+}
+
+.features__text {
+  margin: 0;
+
+  @media (min-width: $tablet) {
+    @include font-setting(16px, 24px,);
+  }
+}

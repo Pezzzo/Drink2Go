@@ -1,0 +1,4 @@
+@mixin font-setting($a, $b) {
+  font-size: $a;
+  line-height: $b;
+}

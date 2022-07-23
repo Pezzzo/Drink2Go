@@ -28,6 +28,10 @@ export const styles = () => {
     .pipe(browser.stream());
 }
 
+export const swiperStyles = () => {
+  return gulp.src('source/css/*.css')
+    .pipe(gulp.dest('build/css'));
+}
 
 // HTML
 
@@ -39,7 +43,7 @@ const html = () => {
 // Scripts
 
 const scripts = () => {
-  return gulp.src('source/js/script.js')
+  return gulp.src('source/js/**/*.js')
     .pipe(gulp.dest('build/js'))
     .pipe(browser.stream());
 }
@@ -141,6 +145,7 @@ export const build = gulp.series(
   optimizeImages,
   gulp.parallel(
     styles,
+    swiperStyles,
     html,
     scripts,
     svg,
@@ -158,6 +163,7 @@ export default gulp.series(
   copyImages,
   gulp.parallel(
     styles,
+    swiperStyles,
     html,
     scripts,
     svg,

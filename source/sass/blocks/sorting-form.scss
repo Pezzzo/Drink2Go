@@ -1,0 +1,160 @@
+.catalog-product__sorting {
+  position: absolute;
+  top: -52px;
+  left: 52%;
+  transform: translateX(-50%);
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $tablet) {
+    top: -60px;
+    left: 80%;
+  }
+
+  @media (min-width: $desktop) {
+    top: -62px;
+    left: 83.4%;
+  }
+}
+
+.sorting-form {
+  background: $base-white;
+  color: $base-black;
+  max-height: 0;
+  max-width: 220px;
+  opacity: 0;
+  transition: 0.3s;
+  border-radius: 8px;
+  overflow: hidden;
+  order: 1;
+  margin-left: auto;
+  margin-right: 18px;
+
+  @media (min-width: $tablet) {
+    margin-right: 14px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-right: 16px;
+  }
+}
+
+.sorting-form__selected-title {
+  margin: 0;
+  margin-right: 10px;
+  font-weight: $font-semibold;
+
+  @include font-setting(16px, 24px,);
+
+  @media (min-width: $tablet) {
+    margin-right: 10px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-right: 12px;
+  }
+}
+
+.sorting-form__selected-field {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 320px;
+  padding-top: 4px;
+
+
+  @media (min-width: $tablet) {
+    max-width: 400px;
+    padding-top: 2px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-top: 5px;
+  }
+}
+
+.sorting-form__selected {
+  font-weight: $font-semibold;
+
+  @include font-setting(16px, 24px,);
+  background: $lightest-grey;
+  border-radius: 8px;
+  margin: 0 14px 0 0;
+  color: $base-primary;
+  position: relative;
+  padding: 4px 30px 4px 10px;
+  cursor: pointer;
+  order: 0;
+
+  &:hover {
+    background: $base-secondary;
+  }
+}
+
+.sorting-form__selected-field::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 5px;
+  right: 27px;
+  top: 18px;
+  background: url("../img/select-arrow.svg") no-repeat 50% 50%;
+  transition: 0.5s;
+
+  @media (min-width: $tablet) {
+    right: 26px;
+    top: 16px;
+  }
+
+  @media (min-width: $desktop) {
+    right: 26px;
+    top: 18px;
+  }
+}
+
+.active {
+  max-height: 100vh;
+  opacity: 1;
+}
+
+.active + .sorting-form__selected-field::after {
+  transform: rotateX(180deg);
+}
+
+.sorting-form__field:hover {
+  background: $base-secondary;
+}
+
+.sorting-form__option {
+  cursor: pointer;
+}
+
+.sorting-form__input {
+  display: none;
+}
+
+.sorting-form__input-text {
+  display: block;
+  padding: 8px 20px;
+
+  @include font-setting(16px, 24px,);
+}
+
+.sorting-form__input:checked + .sorting-form__input-text {
+  background-color: $base-primary;
+  color: $base-white;
+}
+
+.sorting-form__overlay {
+  opacity: 0;
+  visibility: hidden;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  z-index: 20;
+}

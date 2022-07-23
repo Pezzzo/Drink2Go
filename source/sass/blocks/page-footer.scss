@@ -1,0 +1,57 @@
+.page-footer {
+  min-height: 100px;
+}
+
+.page-footer-wrapper {
+  @media (min-width: $tablet) {
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 30px;
+  }
+
+  @media (min-width: $desktop) {
+    grid-template-columns: repeat(4, 1fr);
+    padding: 50px 40px 0 40px;
+  }
+
+  &::after {
+    position: absolute;
+    content: "Интернет-магазин кофейных напитков";
+    text-transform: none;
+    top: 86px;
+    left: 40px;
+    max-width: 320px;
+
+    @media (max-width: $desktop) {
+      display: none;
+    }
+  }
+}
+
+.page-footer__logo {
+  &--position {
+    position: absolute;
+    top: 22px;
+    left: 20px;
+
+    @media (min-width: $tablet) {
+      top: 40px;
+    }
+
+    @media (min-width: $desktop) {
+      top: 40px;
+      left: 40px;
+    }
+  }
+}
+
+.page-footer__logo-img {
+  width: 82px;
+  height: 36px;
+
+  @media (min-width: $tablet) {
+    width: 170px;
+    height: 36px;
+  }
+}
