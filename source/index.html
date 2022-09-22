@@ -35,11 +35,12 @@
       <nav class="main-nav  uppercase-mod">
         <a class="main-nav__logo main-nav__logo--position" href="index.html">
           <picture>
-            <source media="(min-width: 1440px)" srcset="img/Logo-desktop.svg" width="82" height="36">
-            <source media="(min-width: 768px)" srcset="img/Logo-tablet.svg" width="170" height="36">
-            <img class="main-nav__logo-img" src="img/Logo-mobile.svg" width="32" height="36" alt="логотип Drink2Go">
+            <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg" width="82" height="36">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet.svg" width="170" height="36">
+            <img class="main-nav__logo-img" src="img/logo-mobile.svg" width="32" height="36" alt="логотип Drink2Go">
           </picture>
         </a>
+        <p class="main-nav__description">Интернет-магазин <br> кофейных напитков</p>
         <button class="main-nav__burger main-nav__burger--closed main-nav__burger--nojs" type="button">
           <span class="visually-hidden">меню</span>
         </button>
@@ -226,19 +227,19 @@
             <fieldset class="filters-form__milk">
               <legend class="filters-form__subtitle">Наличие молока</legend>
               <label class="filters-form__radio">
-                <input class="filters-form__radio-input visually-hidden" type="radio" name="milk" value="any" checked>
+                <input class="filters-form__radio-input" type="radio" name="milk" value="any" checked>
                 <span class="filters-form__option">Неважно</span>
               </label>
               <label class="filters-form__radio">
-                <input class="filters-form__radio-input visually-hidden" type="radio" name="milk" value="origin">
+                <input class="filters-form__radio-input" type="radio" name="milk" value="origin">
                 <span class="filters-form__option">Только животное</span>
               </label>
               <label class="filters-form__radio">
-                <input class="filters-form__radio-input visually-hidden" type="radio" name="milk" value="vegetable">
+                <input class="filters-form__radio-input" type="radio" name="milk" value="vegetable">
                 <span class="filters-form__option">Только растительное</span>
               </label>
               <label class="filters-form__radio">
-                <input class="filters-form__radio-input visually-hidden" type="radio" name="milk" value="without"
+                <input class="filters-form__radio-input" type="radio" name="milk" value="without"
                   disabled>
                 <span class="filters-form__option">Без молока</span>
               </label>
@@ -246,27 +247,27 @@
             <fieldset class="filters-form__country">
               <legend class="filters-form__subtitle">Страна произрастания</legend>
               <label class="filters-form__checkbox">
-                <input class="filters-form__checkbox-input visually-hidden" type="checkbox" name="country"
+                <input class="filters-form__checkbox-input" type="checkbox" name="country"
                   value="Brazil" checked>
                 <span class="filters-form__option">Бразилия</span>
               </label>
               <label class="filters-form__checkbox">
-                <input class="filters-form__checkbox-input visually-hidden" type="checkbox" name="country"
+                <input class="filters-form__checkbox-input" type="checkbox" name="country"
                   value="Ethiopia">
                 <span class="filters-form__option">Эфиопия</span>
               </label>
               <label class="filters-form__checkbox">
-                <input class="filters-form__checkbox-input visually-hidden" type="checkbox" name="country"
+                <input class="filters-form__checkbox-input" type="checkbox" name="country"
                   value="Colombia">
                 <span class="filters-form__option">Колумбия</span>
               </label>
               <label class="filters-form__checkbox">
-                <input class="filters-form__checkbox-input visually-hidden" type="checkbox" name="country"
+                <input class="filters-form__checkbox-input" type="checkbox" name="country"
                   value="Costa Rica">
                 <span class="filters-form__option">Коста-Рика</span>
               </label>
               <label class="filters-form__checkbox">
-                <input class="filters-form__checkbox-input visually-hidden" type="checkbox" name="country" value="Peru"
+                <input class="filters-form__checkbox-input" type="checkbox" name="country" value="Peru"
                   disabled>
                 <span class="filters-form__option">Перу</span>
               </label>
@@ -275,38 +276,13 @@
           <button class="filters-form__button-reset button" type="reset">Сбросить фильтр</button>
         </form>
         <div class="catalog-product">
-          <div class="catalog-product__sorting" tabindex="0">
-            <form class="sorting-form">
-              <div class="sorting-form__field">
-                <label class="sorting-form__option">
-                  <input class="sorting-form__input" type="radio" name="sorting" checked>
-                  <span class="sorting-form__input-text">по умолчанию</span>
-                </label>
-              </div>
-              <div class="sorting-form__field">
-                <label class="sorting-form__option">
-                  <input class="sorting-form__input" type="radio" name="sorting">
-                  <span class="sorting-form__input-text">сначала дорогие</span>
-                </label>
-              </div>
-              <div class="sorting-form__field">
-                <label class="sorting-form__option">
-                  <input class="sorting-form__input" type="radio" name="sorting">
-                  <span class="sorting-form__input-text">сначала дешёвые</span>
-                </label>
-              </div>
-              <div class="sorting-form__field">
-                <label class="sorting-form__option">
-                  <input class="sorting-form__input" type="radio" name="sorting">
-                  <span class="sorting-form__input-text">высокий рейтинг</span>
-                </label>
-              </div>
-            </form>
-            <div class="sorting-form__selected-field">
-              <p class="sorting-form__selected-title">Сортировка:</p>
-              <p class="sorting-form__selected">по умолчанию</p>
-            </div>
-            <div class="sorting-form__overlay"></div>
+          <div class="catalog-product__sorting">
+            <select class="catalog-product__select"  name="sorting">
+              <option value="value1" selected>по умолчанию</option>
+              <option value="value2">сначала дорогие</option>
+              <option value="value3">сначала дешёвые</option>
+              <option value="value4">высокий рейтинг</option>
+            </select>
           </div>
 
           <ul class="catalog-product__list">
@@ -323,7 +299,7 @@
               <p class="catalog-product__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
               <div class="catalog-product__order">
                 <span class="catalog-product__price">225₽</span>
-                <button class="catalog-product__button button">В корзину</button>
+                <button type="button" class="catalog-product__button button">В корзину</button>
               </div>
             </li>
             <li class="catalog-product__item" tabindex="0">
@@ -447,13 +423,14 @@
     <div class="page-footer-wrapper outer-wrapper">
       <a class="page-footer__logo page-footer__logo--position" href="index.html">
         <picture>
-          <source media="(min-width: 768px)" srcset="img/Logo-desktop.svg" width="170" height="36">
-          <img class="page-footer__logo-img" src="img/Logo-tablet.svg" width="82" height="36" alt="логотип Drink2Go">
+          <source media="(min-width: 768px)" srcset="img/logo-desktop.svg" width="170" height="36">
+          <img class="page-footer__logo-img" src="img/logo-tablet.svg" width="82" height="36" alt="логотип Drink2Go">
         </picture>
       </a>
 
       <section class="socials">
         <h2 class="visually-hidden">социальные сети</h2>
+        <p  class="socials__description">Интернет-магазин кофейных напитков</p>
         <ul class="socials__list">
           <li class="socials__item">
             <a class="socials__link" href="#">
@@ -524,7 +501,7 @@
               набережная реки Карповки, дом 5</a>
           </li>
           <li class="footer-navigation__item footer-navigation__item--indent-link-tel">
-            <a class="footer-navigation__link footer-navigation__link-tel" href="tel:+7(999)999-99-99">+7 (999)
+            <a class="footer-navigation__link footer-navigation__link-tel" href="tel:+79999999999">+7 (999)
               999-99-99</a>
           </li>
         </ul>

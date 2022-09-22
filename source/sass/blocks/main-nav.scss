@@ -12,18 +12,15 @@
     align-items: center;
     justify-content: end;
   }
+}
 
-  &::after {
-    position: absolute;
-    content: "Интернет-магазин кофейных напитков";
-    text-transform: none;
-    top: 24px;
-    left: 230px;
-    width: 160px;
+.main-nav__description {
+  text-transform: none;
+  width: 160px;
+  margin-right: 120px;
 
-    @media (max-width: $desktop) {
-      display: none;
-    }
+  @media (max-width: $desktop) {
+    display: none;
   }
 }
 

@@ -8,6 +8,17 @@
   }
 }
 
+.socials__description {
+  text-transform: none;
+  max-width: 320px;
+  padding-top: 30px;
+  padding-bottom: 0;
+
+  @media (max-width: $desktop) {
+    display: none;
+  }
+}
+
 .socials__list {
   min-height: 80px;
   margin: 0;
@@ -25,7 +36,7 @@
 
   @media (min-width: $desktop) {
     justify-content: start;
-    padding-top: 105px;
+    padding-top: 50px;
   }
 }
 

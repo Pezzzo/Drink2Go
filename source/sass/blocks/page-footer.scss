@@ -14,19 +14,6 @@
     grid-template-columns: repeat(4, 1fr);
     padding: 50px 40px 0 40px;
   }
-
-  &::after {
-    position: absolute;
-    content: "Интернет-магазин кофейных напитков";
-    text-transform: none;
-    top: 86px;
-    left: 40px;
-    max-width: 320px;
-
-    @media (max-width: $desktop) {
-      display: none;
-    }
-  }
 }
 
 .page-footer__logo {

@@ -142,3 +142,27 @@
     background: url("../img/add-to-cart.svg") no-repeat 50% 50%;
   }
 }
+
+.catalog-product__sorting {
+  position: absolute;
+  top: -52px;
+  left: 52%;
+  transform: translateX(-50%);
+  min-width: 180px;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $tablet) {
+    top: -60px;
+    left: 50%;
+  }
+
+  @media (min-width: $desktop) {
+    top: -62px;
+    left: 82%;
+  }
+}
+
+.catalog-product__select {
+  padding: 4px;
+}
